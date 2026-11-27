@@ -372,7 +372,6 @@ def main():
 
     out_dir = sys.argv[1] if len(sys.argv) > 1 else "/output"
     os.makedirs(out_dir, exist_ok=True)
-    os.chmod(out_dir, 0o755)
     path = os.path.join(out_dir, "entry.png")
     with open(path, "wb") as fh:
         fh.write(png_bytes())
